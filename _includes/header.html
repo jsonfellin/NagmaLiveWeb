@@ -1,0 +1,23 @@
+<header class="site-header" role="banner">
+  <div class="container site-header__inner">
+    <a href="{{ '/' | relative_url }}" class="site-logo" aria-label="NagmaLive home">
+      <span class="site-logo__text">Nagma<span class="text-gold">Live</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="site-nav" role="navigation" aria-label="Main navigation">
+      <ul class="site-nav__list">
+        {% for item in site.data.navigation %}
+        <li class="site-nav__item">
+          <a href="{{ item.url | relative_url }}" class="site-nav__link {% if page.url == item.url %}is-active{% endif %}">
+            {{ item.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

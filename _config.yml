@@ -1,0 +1,45 @@
+title: NagmaLive
+description: "NagmaLive — The ultimate Indian classical music practice companion for Tabla, Kathak, and Lehra."
+url: "https://nagmalive.com"
+baseurl: ""
+permalink: /blog/:title/
+
+author:
+  name: NagmaLive
+  email: support@nagmalive.com
+
+social:
+  name: NagmaLive
+  links:
+    - https://www.facebook.com/nagmalive
+    - https://www.youtube.com/@nagmalive
+    - https://x.com/nagmalive
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "NagmaLive"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+  - scope:
+      path: "index.html"
+    values:
+      layout: "default"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - node_modules
+  - vendor

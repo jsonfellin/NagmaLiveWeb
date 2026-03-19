@@ -1,0 +1,19 @@
+- name: Chaz Singh
+  instrument: Tabla
+  image: Chaz.jpg
+  description: Acclaimed tabla player known for his dynamic performances blending classical and contemporary styles.
+
+- name: Hiranmay Mitra
+  instrument: Tabla
+  image: hiranmay.jpg
+  description: Virtuoso tabla artist and educator preserving the rich traditions of Indian classical percussion.
+
+- name: Jayanta Banerjee
+  instrument: Sitar
+  image: jayanta.jpg
+  description: Renowned sitar maestro bringing the depth of Hindustani classical music to audiences worldwide.
+
+- name: Roshan Ali
+  instrument: Tabla
+  image: roshanali.jpg
+  description: Celebrated tabla performer whose rhythmic mastery bridges tradition and innovation.

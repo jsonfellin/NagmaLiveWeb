@@ -1,0 +1,24 @@
+---
+title: Blog
+description: "News, tips, and insights about Indian classical music practice."
+layout: default
+---
+
+<div class="page-header">
+  <div class="container">
+    <h1>NagmaLive <span class="text-gold">Blog</span></h1>
+    <p class="page-header__subtitle">News, tips, and insights about Indian classical music practice.</p>
+  </div>
+</div>
+
+<div class="container section">
+  <div class="grid grid--2">
+    {% for post in site.posts %}
+    <a href="{{ post.url | relative_url }}" class="card" style="text-decoration: none;">
+      <p class="card__meta">{{ post.date | date: "%B %d, %Y" }}</p>
+      <h3 class="card__title">{{ post.title }}</h3>
+      <p class="card__text">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</div>

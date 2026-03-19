@@ -1,0 +1,15 @@
+<section class="section">
+  <div class="container">
+    <h2 class="text-center" style="margin-bottom: var(--space-6)">Trusted by Musicians</h2>
+    <div class="grid grid--4">
+      {% for musician in site.data.musicians %}
+      <div class="musician-card">
+        <img class="musician-card__photo" src="{{ '/assets/images/' | append: musician.image | relative_url }}" alt="{{ musician.name }}" width="120" height="120">
+        <div class="musician-card__name">{{ musician.name }}</div>
+        <div class="musician-card__instrument">{{ musician.instrument }}</div>
+        <p class="musician-card__desc">{{ musician.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
