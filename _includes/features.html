@@ -1,22 +1,63 @@
 <section class="section">
-  <div class="container">
-    <h2 class="text-center" style="margin-bottom: var(--space-6)">Everything You Need to Practice</h2>
-    <div class="grid grid--3">
-      <div class="feature-card card">
-        <img class="feature-card__icon" src="{{ '/assets/images/thekaIcon@2x.png' | relative_url }}" alt="Tabla icon">
-        <h3 class="feature-card__title">Tabla</h3>
-        <p class="feature-card__text">Full theka library with adjustable tempo, layakari options, and realistic tabla sounds for every taal.</p>
+  <div class="container container--wide">
+    <header style="display:grid; grid-template-columns: 1fr auto; gap: var(--space-3); align-items:end; margin-bottom: var(--space-6); flex-wrap: wrap;" class="reveal">
+      <div>
+        <p class="eyebrow" style="margin-bottom: var(--space-2);">Three companions, one app</p>
+        <h2 style="max-width: 18ch;">Built for every <span class="italic text-gold">discipline</span> that lives by the beat.</h2>
       </div>
-      <div class="feature-card card">
-        <img class="feature-card__icon" src="{{ '/assets/images/clickIcon@2x.png' | relative_url }}" alt="Kathak icon">
-        <h3 class="feature-card__title">Kathak</h3>
-        <p class="feature-card__text">Dedicated practice mode for Kathak dancers with metronome, taal cycles, and tempo control.</p>
-      </div>
-      <div class="feature-card card">
-        <img class="feature-card__icon" src="{{ '/assets/images/alapIcon@2x.png' | relative_url }}" alt="Lehra icon">
-        <h3 class="feature-card__title">Lehra</h3>
-        <p class="feature-card__text">Beautiful lehra melodies in multiple raags to accompany your practice sessions and performances.</p>
-      </div>
+      <p style="color: var(--color-text-muted); max-width: 32ch; margin: 0; font-size: var(--text-base);">
+        Tabla players, Kathak dancers, vocalists — all needed the same thing, and rarely had it.
+      </p>
+    </header>
+
+    <div class="pillars reveal" data-delay="1">
+      <article class="pillar">
+        <div class="pillar__index">
+          <span class="pillar__index-num">01</span>
+          <span>Percussion</span>
+        </div>
+        <div class="pillar__icon">
+          <img src="{{ '/assets/images/thekaIcon@2x.png' | relative_url }}" alt="">
+        </div>
+        <h3 class="pillar__title">Tabla</h3>
+        <p class="pillar__text">
+          A full theka library across 50+ taals — Teentaal to Rupak to Dhamar — with adjustable tempo,
+          layakari, and tabla sounds recorded from live instruments, not samples-of-samples.
+        </p>
+        <p class="pillar__detail">30–300 BPM · Half &middot; Double &middot; Custom layakari</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar__index">
+          <span class="pillar__index-num">02</span>
+          <span>Movement</span>
+        </div>
+        <div class="pillar__icon">
+          <img src="{{ '/assets/images/clickIcon@2x.png' | relative_url }}" alt="">
+        </div>
+        <h3 class="pillar__title">Kathak</h3>
+        <p class="pillar__text">
+          A practice mode for dancers — metronome, taal cycles, and accent control so the foot finds the
+          sam without thinking. Audible cues for the bols you actually count to.
+        </p>
+        <p class="pillar__detail">Visual sam · Programmable tihai · Tatkar-ready</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar__index">
+          <span class="pillar__index-num">03</span>
+          <span>Melody</span>
+        </div>
+        <div class="pillar__icon">
+          <img src="{{ '/assets/images/alapIcon@2x.png' | relative_url }}" alt="">
+        </div>
+        <h3 class="pillar__title">Lehra</h3>
+        <p class="pillar__text">
+          Melodic accompaniment in 30+ raags — Bhairavi, Yaman, Bhupali, Desh, more — to hold the cycle
+          when you're soloing, teaching, or practicing alone at 2am.
+        </p>
+        <p class="pillar__detail">Sarangi · Harmonium · Sitar · Bansuri voices</p>
+      </article>
     </div>
   </div>
 </section>
