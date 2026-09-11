@@ -761,34 +761,84 @@
 .form-success.is-visible { display: block; }
 
 /* =====================================================================
-   BLOG POST
+   LONG-FORM PROSE  —  shared by blog posts (.post-content) and pages (.prose)
    ===================================================================== */
-.post-content { max-width: var(--container-narrow); margin: 0 auto; }
-.post-content h2, .post-content h3 { margin-top: var(--space-5); margin-bottom: var(--space-2); }
-.post-content p { margin-bottom: var(--space-2); line-height: var(--leading-relaxed); }
-.post-content ul, .post-content ol { margin-bottom: var(--space-2); padding-left: var(--space-4); }
-.post-content ul { list-style: disc; }
-.post-content ol { list-style: decimal; }
-.post-content li { margin-bottom: var(--space-1); line-height: var(--leading-relaxed); }
-.post-content img { border-radius: var(--radius-md); margin: var(--space-4) 0; }
-.post-header { text-align: center; padding: calc(var(--header-height) + var(--space-6)) 0 var(--space-4); }
-.post-header__meta { color: var(--color-text-muted); font-family: var(--font-mono); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: var(--tracking-wide); margin-top: var(--space-1); }
-.post-back { display: inline-block; margin-bottom: var(--space-4); font-size: var(--text-sm); font-family: var(--font-mono); }
+.post-content, .prose { max-width: var(--container-narrow); margin: 0 auto; }
+.post-content h2, .prose h2 { margin-top: var(--space-6); margin-bottom: var(--space-2); font-size: var(--text-3xl); }
+.post-content h3, .prose h3 { margin-top: var(--space-5); margin-bottom: var(--space-2); }
+.post-content h2 + p, .prose h2 + p { margin-top: 0; }
+.post-content p, .prose p { margin-bottom: var(--space-3); line-height: var(--leading-relaxed); color: var(--color-text-muted); }
+.post-content strong, .prose strong { color: var(--color-text); font-weight: var(--weight-semibold); }
+.post-content ul, .post-content ol,
+.prose ul, .prose ol { margin-bottom: var(--space-3); padding-left: var(--space-3); }
+.post-content ul, .prose ul { list-style: none; }
+.post-content ol, .prose ol { list-style: decimal; padding-left: var(--space-4); }
+.post-content li, .prose li {
+  margin-bottom: var(--space-1);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+  position: relative;
+}
+/* Gold "sam" tick instead of a default bullet */
+.post-content ul > li, .prose ul > li { padding-left: var(--space-3); }
+.post-content ul > li::before, .prose ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 1px;
+  background: var(--color-gold);
+}
+.post-content img, .prose img { border-radius: var(--radius-md); margin: var(--space-4) 0; }
+
+/* Opening paragraph of a prose page — sets the voice before the body copy */
+.prose__lead {
+  font-size: var(--text-lg);
+  color: var(--color-text) !important;
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+.post-header { padding: calc(var(--header-height) + var(--space-8)) 0 var(--space-4); }
+.post-header__meta { color: var(--color-text-muted); font-family: var(--font-mono); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: var(--tracking-wide); margin-top: var(--space-2); }
+.post-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-text-muted);
+}
+.post-back:hover { color: var(--color-gold); }
 
 /* =====================================================================
-   PAGE HEADER
+   PAGE HEADER  —  editorial: eyebrow, split title/lede, closing rule
    ===================================================================== */
 .page-header {
-  text-align: center;
-  padding: calc(var(--header-height) + var(--space-6)) 0 var(--space-6);
+  position: relative;
+  padding: calc(var(--header-height) + var(--space-8)) 0 var(--space-5);
 }
+.page-header__inner {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 34ch);
+  gap: var(--space-3) var(--space-6);
+  align-items: end;
+}
+.page-header__eyebrow { margin-bottom: var(--space-3); }
+.page-header__title { margin: 0; max-width: 20ch; }
 .page-header__subtitle {
   color: var(--color-text-muted);
-  font-size: var(--text-lg);
-  margin-top: var(--space-2);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: var(--text-base);
+  margin: 0;
+}
+.page-header__rule {
+  margin-top: var(--space-5);
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-border-strong), transparent 75%);
 }
 
 /* =====================================================================
@@ -828,6 +878,10 @@
   .stat:nth-child(3), .stat:nth-child(4) { border-top: 1px solid var(--color-border); }
   .capabilities { grid-template-columns: 1fr; }
   .musicians-grid { grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+  .page-header { padding: calc(var(--header-height) + var(--space-5)) 0 var(--space-4); }
+  .page-header__inner { grid-template-columns: 1fr; align-items: start; }
+  .page-header__title { max-width: none; }
+  .post-header { padding: calc(var(--header-height) + var(--space-5)) 0 var(--space-3); }
   .cta-banner { padding: var(--space-6) var(--space-3); }
   .cta-banner__actions { flex-direction: column; gap: var(--space-2); }
   .testimonial { padding: var(--space-4) var(--space-2); }

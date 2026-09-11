@@ -4,13 +4,26 @@ title: "Page Not Found"
 permalink: /404.html
 ---
 
-<div class="section text-center" style="padding: var(--space-16) 0;">
-  <div class="container">
-    <h1 style="font-size: var(--text-5xl); color: var(--color-gold);">404</h1>
-    <h2 style="margin-bottom: var(--space-3);">Page Not Found</h2>
-    <p style="color: var(--color-text-muted); margin-bottom: var(--space-4);">
-      Looks like this page went off-beat. Let's get you back on sam.
-    </p>
+<div class="page-header" style="padding-bottom: var(--space-4);">
+  <div class="container container--wide">
+    <div class="page-header__inner">
+      <div>
+        <p class="eyebrow page-header__eyebrow reveal">Error 404</p>
+        <h1 class="page-header__title reveal" data-delay="1">
+          This page went <span class="italic text-gold">off-beat</span>.
+        </h1>
+      </div>
+      <p class="page-header__subtitle reveal" data-delay="2">
+        The page you're looking for doesn't exist — or it moved. Let's get you back on sam.
+      </p>
+    </div>
+    <div class="page-header__rule reveal" data-delay="3"></div>
+  </div>
+</div>
+
+<div class="container container--wide section--tight" style="padding-bottom: var(--space-12);">
+  <div class="reveal" style="display:flex; gap: var(--space-2); flex-wrap: wrap;">
     <a href="{{ '/' | relative_url }}" class="btn btn--primary">Back to Home</a>
+    <a href="{{ '/blog/' | relative_url }}" class="btn btn--ghost">Read the blog →</a>
   </div>
 </div>
