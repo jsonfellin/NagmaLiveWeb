@@ -196,11 +196,15 @@
 @media (max-width: 768px) {
   .nav-toggle { display: flex; }
   .site-nav {
-    position: fixed;
-    top: var(--header-height);
+    /* .site-header's backdrop-filter makes it the containing block for
+       fixed children, so size against the viewport explicitly. */
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    bottom: 0;
+    height: calc(100vh - var(--header-height));
+    height: calc(100dvh - var(--header-height));
+    overflow-y: auto;
     background: rgba(15, 15, 15, 0.98);
     backdrop-filter: blur(14px);
     padding: var(--space-4);
