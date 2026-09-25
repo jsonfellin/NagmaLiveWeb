@@ -100,8 +100,8 @@ button, input, textarea, select { font: inherit; color: inherit; }
 .container--narrow { max-width: var(--container-narrow); }
 .container--wide   { max-width: var(--container-wide); }
 
-.section { padding: var(--space-12) 0; position: relative; }
-.section--tight { padding: var(--space-8) 0; }
+.section { padding-block: var(--space-12); position: relative; }
+.section--tight { padding-block: var(--space-8); }
 
 .text-center { text-align: center; }
 .text-gold   { color: var(--color-gold); }
