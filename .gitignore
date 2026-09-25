@@ -6,3 +6,4 @@ Gemfile.lock
 .sass-cache/
 .ruby-version
 vendor/
+mockups/

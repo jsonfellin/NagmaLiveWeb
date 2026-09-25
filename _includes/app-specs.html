@@ -4,7 +4,10 @@
     <div class="showcase">
       <div class="showcase__media reveal">
         <div class="showcase__device">
-          <img src="{{ '/assets/images/screenshot.png' | relative_url }}" alt="NagmaLive app showing taal selection, tempo control, and lehra accompaniment">
+          <picture>
+            <source type="image/webp" srcset="{{ '/assets/images/app-home-ios.webp' | relative_url }} 1x, {{ '/assets/images/app-home-ios@2x.webp' | relative_url }} 2x">
+            <img src="{{ '/assets/images/app-home-ios.png' | relative_url }}" srcset="{{ '/assets/images/app-home-ios@2x.png' | relative_url }} 2x" alt="NagmaLive home screen on iPhone showing the nagma library by time of day, free nagmas, and beginner picks" width="300" height="613">
+          </picture>
         </div>
       </div>
 

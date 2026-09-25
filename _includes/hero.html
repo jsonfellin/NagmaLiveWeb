@@ -29,7 +29,10 @@
 
       <div class="hero__media reveal" data-delay="2">
         <div class="hero__device">
-          <img src="{{ '/assets/images/screenshot.png' | relative_url }}" alt="NagmaLive app — tabla and lehra practice screen" width="300">
+          <picture>
+            <source type="image/webp" srcset="{{ '/assets/images/app-home-ios.webp' | relative_url }} 1x, {{ '/assets/images/app-home-ios@2x.webp' | relative_url }} 2x">
+            <img src="{{ '/assets/images/app-home-ios.png' | relative_url }}" srcset="{{ '/assets/images/app-home-ios@2x.png' | relative_url }} 2x" alt="NagmaLive home screen on iPhone with nagmas recommended for the time of day, free nagmas, and picks for beginners" width="300" height="613">
+          </picture>
         </div>
 
         {%- comment -%}
