@@ -718,6 +718,13 @@
   mix-blend-mode: overlay;
   z-index: -1;
 }
+.cta-banner__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  margin: 0 auto var(--space-3);
+  box-shadow: var(--glow-gold);
+}
 .cta-banner__eyebrow { margin-bottom: var(--space-3); }
 .cta-banner__title {
   font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
