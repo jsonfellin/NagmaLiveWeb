@@ -24,12 +24,17 @@
   var audio = null;
   var audioAvailable = false;
   var timer = null;
+  var endTimer = null;
+  var fadeTimer = null;
+  var TAIL_MS = 2000;
   var current = -1;
   var originalHint = hintEl ? hintEl.innerHTML : '';
 
   if (src) {
     audio = new Audio(src);
-    audio.loop = true;
+    audio.loop = false;
+    // The clip is one cycle plus a short tail that lands on sam and fades out (baked in).
+    audio.addEventListener('ended', function () { if (player.dataset.playing === 'true') stop(); });
     audio.preload = 'auto';
     audio.addEventListener('canplaythrough', function () { audioAvailable = true; }, { once: true });
     audio.addEventListener('error', function () { audioAvailable = false; });
@@ -47,10 +52,12 @@
 
   function start() {
     player.dataset.playing = 'true';
-    btn.setAttribute('aria-label', 'Pause tabla preview');
+    btn.setAttribute('aria-label', 'Pause sarangi preview');
     current = -1;
     step();
     timer = setInterval(step, msPerBeat);
+    // Visuals: one cycle, then hold on sam while the audio tail fades out.
+    endTimer = setTimeout(finish, beatCount * msPerBeat);
 
     if (audio && audioAvailable) {
       audio.currentTime = 0;
@@ -73,10 +80,19 @@
     }
   }
 
+  function finish() {
+    endTimer = null;
+    if (timer) { clearInterval(timer); timer = null; }
+    step(); // lands on sam (beat 1)
+    if (!audio) fadeTimer = setTimeout(stop, TAIL_MS);
+  }
+
   function stop() {
     player.dataset.playing = 'false';
-    btn.setAttribute('aria-label', 'Play tabla preview');
+    btn.setAttribute('aria-label', 'Play sarangi preview');
     if (timer) { clearInterval(timer); timer = null; }
+    if (endTimer) { clearTimeout(endTimer); endTimer = null; }
+    if (fadeTimer) { clearTimeout(fadeTimer); fadeTimer = null; }
     clearActive();
     current = -1;
     if (audio) { audio.pause(); audio.currentTime = 0; }
