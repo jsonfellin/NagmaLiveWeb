@@ -43,7 +43,7 @@ The contact form submits to [Formspree](https://formspree.io) which forwards ema
 
 ## Design System
 
-- **Theme:** Dark background (#0f0f0f) with gold (#d4a843) and teal (#2ec4b6) accents
+- **Theme:** Dark background (#171712) with gold (#FAC738) and teal (#008080) accents
 - **Typography:** Open Sans (body), Playfair Display (headings)
 - **Grid:** 8px spacing scale
 - **CSS:** Vanilla CSS with custom properties (no build step)

@@ -27,19 +27,23 @@ defaults:
     values:
       layout: "post"
       author: "NagmaLive"
+      image: /assets/images/og-card.png
   - scope:
       path: ""
     values:
       layout: "page"
+      image: /assets/images/og-card.png
   - scope:
       path: "index.html"
     values:
       layout: "default"
+      image: /assets/images/og-card.png
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - CLAUDE.md
   - LICENSE
   - node_modules
   - vendor

@@ -43,4 +43,4 @@ Video yourself practicing. Watch for clarity of footwork, alignment of movements
 
 ## Using NagmaLive for Kathak Practice
 
-NagmaLive's Kathak mode provides the taal accompaniment and lehra that dancers need for productive solo practice. Set your taal, choose a tempo, select a lehra raag, and you have a complete practice environment — no need to coordinate schedules with a tabla player for every practice session.
+NagmaLive's Kathak mode adds live tabla theka recordings under the lehra, matched to its taal and pitch, giving dancers the accompaniment they need for productive solo practice. Choose a lehra, set your tempo, and you have a complete practice environment — no need to coordinate schedules with a tabla player for every practice session.

@@ -30,7 +30,7 @@ A good beginner routine might look like:
 
 Practicing with a lehra or nagma is essential for developing your sense of sam (the first beat) and laya (tempo). A good lehra keeps you honest — if you drift out of taal, you'll hear it immediately.
 
-NagmaLive provides high-quality lehra accompaniment in 30+ raags, so you always have a practice partner ready when you are.
+NagmaLive provides real lehra recordings on sarangi, sitar, and harmonium in 15 raags, so you always have a practice partner ready when you are.
 
 ## Listen Actively
 
