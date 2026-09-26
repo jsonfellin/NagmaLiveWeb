@@ -1,25 +1,25 @@
 :root {
   /* ===== Colors (design system — per README) ===== */
-  --color-bg: #0f0f0f;
-  --color-bg-alt: #161616;
-  --color-bg-card: #1c1c1c;
-  --color-surface: #232323;
-  --color-border: #2a2a2a;
-  --color-border-strong: #3a3a3a;
+  --color-bg: #171712;
+  --color-bg-alt: #1c1c17;
+  --color-bg-card: #22221c;
+  --color-surface: #2a2a23;
+  --color-border: #302f27;
+  --color-border-strong: #42413a;
 
   --color-text: #f0ece4;          /* warm ivory, not pure white — easier on dark */
   --color-text-muted: #a39d92;
   --color-text-subtle: #6b6760;
 
-  --color-gold: #d4a843;
-  --color-gold-light: #e6c46a;
-  --color-gold-dark: #b08930;
-  --color-gold-ink: rgba(212, 168, 67, 0.16);  /* low-alpha wash */
+  --color-gold: #FAC738;
+  --color-gold-light: #FFD966;
+  --color-gold-dark: #C99A1F;
+  --color-gold-ink: rgba(250, 199, 56, 0.16);  /* low-alpha wash */
 
-  --color-teal: #2ec4b6;
-  --color-teal-light: #5eddd0;
-  --color-teal-dark: #1a9e92;
-  --color-teal-ink: rgba(46, 196, 182, 0.14);
+  --color-teal: #008080;
+  --color-teal-light: #2BB3B3;
+  --color-teal-dark: #005F5F;
+  --color-teal-ink: rgba(0, 128, 128, 0.22);
 
   --color-white: #ffffff;
   --color-black: #000000;
@@ -91,8 +91,8 @@
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
   --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.55);
-  --glow-gold: 0 0 32px rgba(212, 168, 67, 0.35);
-  --glow-teal: 0 0 32px rgba(46, 196, 182, 0.35);
+  --glow-gold: 0 0 32px rgba(250, 199, 56, 0.35);
+  --glow-teal: 0 0 32px rgba(0, 128, 128, 0.35);
 
   /* ===== Motion ===== */
   --transition-fast: 150ms cubic-bezier(.2,.7,.3,1);

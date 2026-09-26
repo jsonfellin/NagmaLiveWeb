@@ -36,7 +36,7 @@ CSS lives in `assets/css/` and is loaded in `_includes/head.html` in this exact 
 3. `components.css` — reusable component classes (`.btn`, `.card`, `.accordion`, `.contact-form`, etc.)
 4. `layout.css` — page-level layout (`.container`, `.grid`, `.section`, `.page-header`)
 
-Theme is dark (`--color-bg: #0f0f0f`) with gold (`#d4a843`) and teal (`#2ec4b6`) accents. Fonts are Playfair Display (display) + Open Sans (body), loaded from Google Fonts with `preconnect`. No CSS preprocessor — write vanilla CSS that uses the tokens.
+Theme is dark (`--color-bg: #171712`) with gold (`#FAC738`) and teal (`#008080`) accents. Fonts are Playfair Display (display) + Open Sans (body), loaded from Google Fonts with `preconnect`. No CSS preprocessor — write vanilla CSS that uses the tokens.
 
 ### JavaScript
 
